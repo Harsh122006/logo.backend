@@ -6,7 +6,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const API_URL = "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0";
+const API_URL = "https://router.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0";
+
 const HF_KEY = process.env.HF_KEY;
 
 app.post("/generate-logo", async (req, res) => {
